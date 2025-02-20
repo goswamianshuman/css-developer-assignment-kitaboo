@@ -1,0 +1,56 @@
+@import url("layout.css");
+
+/* Large Devices (Desktops, 992px and below) */
+@media screen and (max-width: 992px) {
+    .contact-form-container {
+        max-width: 500px !important;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .navbar {
+        justify-content: space-around;
+    }
+    .hero-heading {
+        font-size: 2rem;
+        line-height: 2.5rem !important;
+    }
+    .hero-subheading {
+        font-size: medium !important;
+        line-height: 1.2rem !important;
+    }
+    .hero-container {
+        gap: 2rem 0 !important;
+    }
+    .right-col {
+        width: 100%;
+        padding: 3rem;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    button {
+        width: 100%;
+    }
+    .features-container {
+        flex-direction: column;
+        gap: 50px 0;
+    }
+    .contact-form-container {
+        max-width: 430px !important;
+    }
+}
+
+/* Small Devices (Phones, 576px and below) */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+}

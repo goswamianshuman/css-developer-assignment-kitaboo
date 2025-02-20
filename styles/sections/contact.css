@@ -1,0 +1,48 @@
+.contact-form-container {
+    background: var(--background-color-container);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 700px;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-form-container p {
+    color: var(--text-color);
+    margin-bottom: var(--margin-bottom);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: var(--form-group-margin-bottom);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--label-color);
+    font-size: var(--label-font-size);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--input-padding);
+    border: none;
+    border-radius: 4px;
+    background: var(--input-background);
+    color: var(--label-color);
+    font-size: var(--font-size);
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: var(--input-focus-background);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}

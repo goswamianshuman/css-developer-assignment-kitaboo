@@ -1,0 +1,47 @@
+#features {
+    padding: var(--padding) 0;
+}
+
+.features-container {
+    display: flex;
+    background: var(--background-color-container);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: var(--padding) 4rem;
+}
+
+.features-left,
+.features-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-left > img {
+    height: 50vh;
+}
+
+math {
+    font-size: var(--font-size-large);
+}
+
+mo, mi, mn, msqrt, mfrac {
+    font-family: var(--font-family);
+}
+
+mo {
+    color: var(--highlight-color);
+    font-weight: 300;
+}
+
+msqrt {
+    border-top: 2px solid var(--sqrt-border-color);
+    padding-top: 2px;
+}
+
+mfrac {
+    font-size: var(--font-size-large);
+}

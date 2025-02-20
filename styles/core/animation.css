@@ -1,0 +1,62 @@
+@keyframes glowing-button {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color-loader);
+    z-index: var(--preloader-z-index);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut var(--fade-out-duration) ease-out var(--fade-out-delay) forwards;
+}
+
+/* Spinner styling */
+.spinner {
+    border: 3px solid var(--spinner-border-color);
+    border-top: 3px solid var(--spinner-border-top-color);
+    border-radius: 50%;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    animation: spin var(--spin-duration) linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#content {
+    opacity: 1;
+}

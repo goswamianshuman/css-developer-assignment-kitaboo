@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/* containers */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+/* inputs */
+input {
+    height: var(--input-height);
+    width: 100%;
+    outline: none;
+    padding: var(--input-padding);
+    border: var(--input-border-width) solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+
+input:focus {
+    border-color: var(--focus-border-color);
+}
+
+/* buttons */
+button {
+    outline: none;
+    border: none;
+    background: var(--button-background);
+    color: var(--text-color);
+    font-size: var(--button-font-size);
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+}
+
+button:before {
+    content: "";
+    background: var(--button-gradient);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    animation: glowing-button 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--button-background-after);
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    transition: 0.2s all ease;
+}
+
+button:hover:after {
+    background-color: var(--button-hover-background);
+}
+
+/* links */
+a {
+    color: var(--link-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    font-size: var(--button-font-size);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* paragraphs and headings */
+h1 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    font-size: var(--h3-font-size);
+}
+
+p {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    font-size: var(--p-font-size);
+}
