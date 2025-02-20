@@ -140,9 +140,10 @@
 
   <section id="features" role="region" aria-labelledby="features-title">
     <div class="container features-container">
-      <div class="features-left">
-        <img src="/images/graph.svg" alt="Mathematical illustration with graph visualization">
-      </div>
+      <picture class="features-left">
+          <source srcset="images/graph.svg" type="image/svg+xml">
+          <img src="/images/graph_fallback.png" alt="Mathematical illustration with graph visualization">
+      </picture>
       <div class="features-right">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <mi>x</mi>
