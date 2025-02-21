@@ -182,7 +182,7 @@ html:has(#theme-toggle:checked) {
     /* Navbar */
     --navbar-height: 50px;
     --navbar-padding: 10px 0px;
-    --navbar-bg: rgba(219, 219, 219, 0.19);
+    --navbar-bg: rgba(52, 52, 52, 0.19);
     /* inversion of rgba(36,36,36,0.19) */
     --navbar-border-radius: 10px;
     --navbar-box-shadow: 0 4px 30px rgba(255, 255, 255, 0.064);
