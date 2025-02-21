@@ -7,7 +7,7 @@
     min-height: var(--min-height-hero);
 }
 
-.bg-img {
+.bg-img , .bg-img > img {
     z-index: var(--z-index-low);
     position: absolute;
     max-width: var(--max-width-bg-img);
