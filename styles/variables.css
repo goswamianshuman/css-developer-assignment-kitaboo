@@ -1,7 +1,7 @@
 :root {
     --primary-color: #ff7300;
     --secondary-color: #ffffff;
-    --tertiary-color: #e0e0e06d;
+    --tertiary-color: #3232326d;
     --background-color-card: rgba(17, 17, 17, 0.37);
     --border-color: rgba(255, 255, 255, 0.142);
     --box-shadow-color: rgba(0, 0, 0, 0.1);
@@ -13,7 +13,7 @@
     --popular-btn-hover-background: #e56500;
     --z-index-high: 99999;
     --z-index-low: -1;
-    --opacity-low: 10%;
+    --opacity-low: 30%;
     --color-subheading: rgba(199, 199, 199, 0.678);
     --color-button-bg: #6767674e;
     --color-button-border: rgba(255, 166, 0, 0.135);
@@ -124,50 +124,194 @@
     --spin-duration: 1s;
 }
 
-#theme-toggle:checked~.wrapper {
+html:has(#theme-toggle:checked) {
+    /* Accent Colors */
     --primary-color: #ff7300;
-    --secondary-color: #131313;
-    --background-color: #131313;
-    --text-color: #ffffff;
+    /* stays the same */
+    --secondary-color: #000000;
+    /* inverted from white */
+    --tertiary-color: #1f1f1f6d;
+    --tertiary-color-card: #eae7e76d;
+    /* inversion of #e0e0e0 with same opacity */
+    --color-subheading: rgba(57, 57, 57, 0.678);
+    /* Cards & Shadows */
+    --background-color-card: rgba(238, 238, 238, 0.37);
+    /* inverted from rgba(17,17,17,0.37) */
+    --border-color: rgba(0, 0, 0, 0.142);
+    /* inverted from rgba(255,255,255,0.142) */
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+    /* inverted from rgba(0,0,0,0.1) */
+    --hover-box-shadow-color: rgba(255, 255, 255, 0.15);
+    /* inverted from rgba(0,0,0,0.15) */
+
+    /* Buttons */
+    --btn-background: rgb(168, 168, 168);
+    /* inversion of rgb(196,196,196) */
+    --btn-hover-background: #060606;
+    /* inversion of #f9f9f9 */
+    --popular-border-color: #ff73003a;
+    /* left as is (accent with transparency) */
+    --popular-btn-background: #ff7300;
+    --popular-btn-hover-background: #e56500;
+    --color-button-bg: #9898984e;
+    /* inversion of #6767674e */
+    --color-button-border: rgba(255, 166, 0, 0.135);
+    /* stays the same */
+
+    /* Misc. Layout */
+    --z-index-high: 99999;
+    --z-index-low: -1;
+    --opacity-low: 30%;
+    --gap-hero-container: 20px 0;
+    --gap-hero-group: 0 3rem;
+    --padding-button: 10px;
+    --min-width-button: 130px;
+    --border-radius-button: 10px;
+    --border-width-button: 1.3px;
+    --line-height-heading: 5rem;
+    --line-height-subheading: 2.5rem;
+    --font-weight-heading: 400;
+    --font-weight-subheading: 300;
+    --font-size-subheading: 1.5rem;
+    --max-width-heading: 65vw;
+    --max-width-subheading: 75vw;
+    --max-width-bg-img: 95vw;
+    --min-height-hero: 90vh;
+    --min-height-hero-container: 80vh;
+
+    /* Navbar */
+    --navbar-height: 50px;
+    --navbar-padding: 10px 0px;
+    --navbar-bg: rgba(219, 219, 219, 0.19);
+    /* inversion of rgba(36,36,36,0.19) */
+    --navbar-border-radius: 10px;
+    --navbar-box-shadow: 0 4px 30px rgba(255, 255, 255, 0.064);
+    /* inversion of rgba(0,0,0,0.064) */
+    --navbar-backdrop-blur: 3.3px;
+    --navbar-border: 1px solid rgba(188, 188, 188, 0.45);
+    /* inversion of rgba(67,67,67,0.45) */
+    --navbar-button-scale: 0.8;
+    --nav-links-color: rgb(49, 49, 49);
+    /* inversion of rgb(206,206,206) */
+    --nav-links-hover-color: #000000;
+    /* inversion of white */
+    --nav-links-font-size: 12px;
+    --logo-width: 10rem;
+    --nav-links-gap: 20px;
+
+    /* Container & Text */
+    --padding: 2rem;
+    /* using the latter defined padding */
+    --background-color-container: #e5e5e5;
+    /* inversion of #1a1a1a */
+    --text-color: #000000;
+    /* final dark text (white) inverted */
+    --border-radius: 8px;
+    --box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+    /* inversion of rgba(0,0,0,0.5) */
+    --transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    --highlight-color: #ff5722;
+    --sqrt-border-color: #ff9800;
+    --font-family: 'Poppins', sans-serif;
+    --font-size-large: 3rem;
+    --label-color: #1f1f1f;
+    /* inversion of #e0e0e0 */
+
+    /* Inputs & Forms */
+    --input-background: #d4d4d4;
+    /* inversion of #2b2b2b */
+    --input-focus-background: #cccccc;
+    /* inversion of #333 */
+    --input-padding: 0.75rem 1rem;
+    --font-size: 1rem;
+    --label-font-size: 0.9rem;
+    --margin-bottom: 20px;
+    --form-group-margin-bottom: 1.5rem;
+
+    /* Page Background & Borders */
+    --background-color: #ecececfa;
+    /* inversion of #131313fa */
+    --border-color: #b6b6b695;
+    /* inversion of #49494995 */
+    --focus-border-color: #ff8c00;
+    /* remains as accent */
+    --button-background: #ff8c00;
+    /* remains as accent */
+    --button-hover-background: #f1f1f1;
+    /* inversion of #0e0e0e */
+    --link-color: #ff7300;
+    --link-hover-color: #ff9500;
+
+    /* Gradient & Dark Button Variants */
+    --button-gradient: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    /* left as is */
+    --button-background-dark: #eeeeee;
+    /* inversion of #111 */
+    --button-background-after: #edeeee;
+    /* inversion of #121111 */
+
+    /* Typography & Sizing */
+    --font-weight: 300;
+    --font-style: normal;
+    --h1-font-size: 48px;
+    --h2-font-size: 32px;
+    --h3-font-size: 28px;
+    --p-font-size: 16px;
+    --button-font-size: 12px;
+    --button-padding: 0.6em 2em;
+    --button-border-radius: 10px;
+    --input-border-radius: 5px;
+    --input-height: 25px;
+    --input-padding: 0 10px;
+    --input-border-width: 1.7px;
+    --container-max-width: 90%;
+    --font-family-poppins: "Poppins", serif;
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* Loader & Spinner */
+    --background-color-loader: #dcdcdc;
+    /* inversion of #232323 */
+    --spinner-border-color: #ededed;
+    /* inversion of #121212 */
+    --spinner-border-top-color: #f37c0e;
+    --spinner-size: 60px;
+    --preloader-z-index: 9999999;
+    --fade-out-duration: 0.5s;
+    --fade-out-delay: 1s;
+    --spin-duration: 1s;
 }
 
-.wrapper {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.toggle-container {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: var(--z-index-high);
-}
 
 #theme-toggle {
     display: none;
 }
 
-.toggle-label {
+
+label[for="theme-toggle"] {
     display: inline-block;
-    width: 50px;
-    height: 25px;
-    background-color: var(--primary-color);
-    border-radius: 25px;
-    position: relative;
+    padding: 10px 20px;
+    background-color: var(--btn-background);
+    color: #0e0e0e !important;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-.toggle-label::after {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 21px;
-    height: 21px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-
-#theme-toggle:checked+.toggle-label::after {
-    transform: translateX(25px);
+    margin: 20px;
+    scale: 0.8;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

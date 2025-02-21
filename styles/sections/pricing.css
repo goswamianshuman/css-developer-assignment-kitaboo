@@ -76,7 +76,7 @@
 
 .plan-features li {
     font-size: 1rem;
-    color: #d6d6d690;
+    color: var(--pricing-list-color);
     padding: 0.5rem 0;
     text-align: start;
 }
@@ -98,7 +98,7 @@
 }
 
 .most-popular-badge {
-    background: #00000028;
+    background: #f5f5f500;
     text-align: start;
     max-width: max-content;
     padding: 0.5rem 3rem;
