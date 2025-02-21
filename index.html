@@ -14,7 +14,7 @@
   <div aria-label="Skip links" class="skip-link">
     <a href="#pricing">Skip to Content</a>
   </div>
-  
+
   <!-- loader -->
   <div id="preloader">
     <div class="spinner"></div>
@@ -42,7 +42,10 @@
   </header>
 
   <section id="hero" role="region" aria-labelledby="hero-heading">
-    <img src="/images/bg.svg" alt="Hero background image" class="bg-img">
+    <picture  class="bg-img">
+      <source srcset="images/bg.svg" type="image/svg+xml">
+      <img src="/images/bg_fallback.png" alt="Hero background image">
+    </picture>
 
     <div class="container hero-container">
       <h1 id="hero-heading" class="hero-heading">🚀 Supercharge Your Workflow with CalcMaster</h1>
@@ -133,7 +136,7 @@
           <textarea id="message" name="message" placeholder="Your message here..." required
             aria-required="true"></textarea>
         </div>
-        <button type="submit"  aria-label="Send Message" tabindex="0">Send Message</button>
+        <button type="submit" aria-label="Send Message" tabindex="0">Send Message</button>
       </form>
     </div>
   </section>
@@ -141,8 +144,8 @@
   <section id="features" role="region" aria-labelledby="features-title">
     <div class="container features-container">
       <picture class="features-left">
-          <source srcset="images/graph.svg" type="image/svg+xml">
-          <img src="/images/graph_fallback.png" alt="Mathematical illustration with graph visualization">
+        <source srcset="images/graph.svg" type="image/svg+xml">
+        <img src="/images/graph_fallback.png" alt="Mathematical illustration with graph visualization">
       </picture>
       <div class="features-right">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
